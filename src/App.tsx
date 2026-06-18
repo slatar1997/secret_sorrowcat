@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PasswordGate from './components/PasswordGate';
 import TicketScene from './components/TicketScene';
 import LondonScene from './components/LondonScene';
@@ -8,6 +8,7 @@ import VinylGame from './components/VinylGame';
 import DiaryGame from './components/DiaryGame';
 import SecretBoxGame from './components/SecretBoxGame';
 import FinalScene from './components/FinalScene';
+import { startAssetPreload } from './utils/preloadAssets';
 
 // Game flow phases matching spec Step 1 → Step 9
 type GamePhase =
@@ -38,6 +39,13 @@ function App() {
 
   // Suppress unused-variable warnings — passengerName can be referenced if needed
   void passengerName;
+
+  // Begin background asset preloading once the password gate is passed
+  useEffect(() => {
+    if (phase !== 'password') {
+      startAssetPreload();
+    }
+  }, [phase]);
 
   return (
     <div className="w-full min-h-screen overflow-hidden">
