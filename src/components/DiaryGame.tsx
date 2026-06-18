@@ -212,8 +212,8 @@ function DiaryGame({ onDiaryRead, onBackToDesk }: DiaryGameProps) {
         <motion.button
           type="button"
           className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shadow-lg cursor-pointer select-none transition-colors duration-200 ${currentPage > 0
-              ? 'bg-[#E8D5C4] hover:bg-[#DCC8B5] text-[#7A6455]'
-              : 'bg-[#E8D5C4]/40 text-[#B8A99A] cursor-not-allowed'
+            ? 'bg-[#E8D5C4] hover:bg-[#DCC8B5] text-[#7A6455]'
+            : 'bg-[#E8D5C4]/40 text-[#B8A99A] cursor-not-allowed'
             }`}
           whileHover={currentPage > 0 ? { scale: 1.1 } : {}}
           whileTap={currentPage > 0 ? { scale: 0.85 } : {}}
@@ -266,8 +266,8 @@ function DiaryGame({ onDiaryRead, onBackToDesk }: DiaryGameProps) {
         <motion.button
           type="button"
           className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shadow-lg cursor-pointer select-none transition-colors duration-200 ${currentPage < TOTAL_PAGES - 1
-              ? 'bg-[#E8D5C4] hover:bg-[#DCC8B5] text-[#7A6455]'
-              : 'bg-[#E8D5C4]/40 text-[#B8A99A] cursor-not-allowed'
+            ? 'bg-[#E8D5C4] hover:bg-[#DCC8B5] text-[#7A6455]'
+            : 'bg-[#E8D5C4]/40 text-[#B8A99A] cursor-not-allowed'
             }`}
           whileHover={currentPage < TOTAL_PAGES - 1 ? { scale: 1.1 } : {}}
           whileTap={currentPage < TOTAL_PAGES - 1 ? { scale: 0.85 } : {}}
@@ -289,8 +289,8 @@ function DiaryGame({ onDiaryRead, onBackToDesk }: DiaryGameProps) {
           <div
             key={i}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${i === currentPage
-                ? 'bg-[#7A6455] scale-125'
-                : 'bg-[#C4B5A5]'
+              ? 'bg-[#7A6455] scale-125'
+              : 'bg-[#C4B5A5]'
               }`}
           />
         ))}
