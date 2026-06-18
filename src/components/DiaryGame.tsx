@@ -29,26 +29,26 @@ interface FlipBookRef {
 
 // ─── Photo Data (20 photos, 4 per page across 5 pages) ─────────────
 const ALL_PHOTOS: PhotoEntry[] = [
-  { src: '/images/diary/photo-01.png', caption: 'ความทรงจำที่ 1 💕' },
-  { src: '/images/diary/photo-02.png', caption: 'ความทรงจำที่ 2 🌸' },
-  { src: '/images/diary/photo-03.png', caption: 'ความทรงจำที่ 3 ✨' },
-  { src: '/images/diary/photo-04.png', caption: 'ความทรงจำที่ 4 🎀' },
-  { src: '/images/diary/photo-05.png', caption: 'ความทรงจำที่ 5 🌷' },
-  { src: '/images/diary/photo-06.png', caption: 'ความทรงจำที่ 6 💫' },
-  { src: '/images/diary/photo-07.png', caption: 'ความทรงจำที่ 7 🦋' },
-  { src: '/images/diary/photo-08.png', caption: 'ความทรงจำที่ 8 🌈' },
-  { src: '/images/diary/photo-09.png', caption: 'ความทรงจำที่ 9 🍰' },
-  { src: '/images/diary/photo-10.png', caption: 'ความทรงจำที่ 10 🎵' },
-  { src: '/images/diary/photo-11.png', caption: 'ความทรงจำที่ 11 🌻' },
-  { src: '/images/diary/photo-12.png', caption: 'ความทรงจำที่ 12 💝' },
-  { src: '/images/diary/photo-13.png', caption: 'ความทรงจำที่ 13 🌟' },
-  { src: '/images/diary/photo-14.png', caption: 'ความทรงจำที่ 14 🎶' },
-  { src: '/images/diary/photo-15.png', caption: 'ความทรงจำที่ 15 💐' },
-  { src: '/images/diary/photo-16.png', caption: 'ความทรงจำที่ 16 🧸' },
-  { src: '/images/diary/photo-17.png', caption: 'ความทรงจำที่ 17 🎈' },
-  { src: '/images/diary/photo-18.png', caption: 'ความทรงจำที่ 18 🌺' },
-  { src: '/images/diary/cover-19.png', caption: 'ความทรงจำที่ 19 💖' },
-  { src: '/images/diary/photo-20.jpg', caption: 'ความทรงจำที่ 20 🥰' },
+  { src: '/images/diary/photo-01.png', caption: 'ตรวจพบคนน่ารัก 💕' },
+  { src: '/images/diary/photo-02.png', caption: 'ดอกไม้กับตุ๊กตาในเดทแรก 🌸' },
+  { src: '/images/diary/photo-03.png', caption: 'คนน่ารัก ✨' },
+  { src: '/images/diary/photo-04.png', caption: 'Heart 🎀' },
+  { src: '/images/diary/photo-05.png', caption: 'มีคนอวดชุด 🌷' },
+  { src: '/images/diary/photo-06.png', caption: 'First Photobooth 💫' },
+  { src: '/images/diary/photo-07.png', caption: 'น่ารักตลอด🦋' },
+  { src: '/images/diary/photo-08.png', caption: 'มู้ดดี 🌈' },
+  { src: '/images/diary/photo-09.png', caption: 'ถ่ายมุมอะไร 🍰' },
+  { src: '/images/diary/photo-10.png', caption: 'Dinner 🎵' },
+  { src: '/images/diary/photo-11.png', caption: 'มีคนไม่เอนจอยกับปีนัง🌻' },
+  { src: '/images/diary/photo-12.png', caption: 'เอนจอยกับซาวโด 💝' },
+  { src: '/images/diary/photo-13.png', caption: 'กินสเต็กด้วยกัน  🌟' },
+  { src: '/images/diary/photo-14.png', caption: 'รูปแรกที่ทำให้ตกหลุมรัก 🎶' },
+  { src: '/images/diary/photo-15.png', caption: 'น่ารักมากอีกแล้ว💐' },
+  { src: '/images/diary/photo-16.png', caption: 'น่ารักที่สุด 🧸' },
+  { src: '/images/diary/photo-17.png', caption: 'ความน่ารักเท่ากับทศนิยมของค่าพาย 🎈' },
+  { src: '/images/diary/photo-18.png', caption: 'London 🌺' },
+  { src: '/images/diary/cover-19.png', caption: 'รอยยิ้มที่มีทุกรูป 💖' },
+  { src: '/images/diary/photo-20.jpg', caption: 'Stalker POV 🥰' },
 ];
 
 // Slice photos into pages of 4
@@ -211,11 +211,10 @@ function DiaryGame({ onDiaryRead, onBackToDesk }: DiaryGameProps) {
         {/* Prev button */}
         <motion.button
           type="button"
-          className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shadow-lg cursor-pointer select-none transition-colors duration-200 ${
-            currentPage > 0
+          className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shadow-lg cursor-pointer select-none transition-colors duration-200 ${currentPage > 0
               ? 'bg-[#E8D5C4] hover:bg-[#DCC8B5] text-[#7A6455]'
               : 'bg-[#E8D5C4]/40 text-[#B8A99A] cursor-not-allowed'
-          }`}
+            }`}
           whileHover={currentPage > 0 ? { scale: 1.1 } : {}}
           whileTap={currentPage > 0 ? { scale: 0.85 } : {}}
           onClick={handleFlipPrev}
@@ -266,11 +265,10 @@ function DiaryGame({ onDiaryRead, onBackToDesk }: DiaryGameProps) {
         {/* Next button */}
         <motion.button
           type="button"
-          className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shadow-lg cursor-pointer select-none transition-colors duration-200 ${
-            currentPage < TOTAL_PAGES - 1
+          className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shadow-lg cursor-pointer select-none transition-colors duration-200 ${currentPage < TOTAL_PAGES - 1
               ? 'bg-[#E8D5C4] hover:bg-[#DCC8B5] text-[#7A6455]'
               : 'bg-[#E8D5C4]/40 text-[#B8A99A] cursor-not-allowed'
-          }`}
+            }`}
           whileHover={currentPage < TOTAL_PAGES - 1 ? { scale: 1.1 } : {}}
           whileTap={currentPage < TOTAL_PAGES - 1 ? { scale: 0.85 } : {}}
           onClick={handleFlipNext}
@@ -290,11 +288,10 @@ function DiaryGame({ onDiaryRead, onBackToDesk }: DiaryGameProps) {
         {Array.from({ length: TOTAL_PAGES }).map((_, i) => (
           <div
             key={i}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              i === currentPage
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${i === currentPage
                 ? 'bg-[#7A6455] scale-125'
                 : 'bg-[#C4B5A5]'
-            }`}
+              }`}
           />
         ))}
       </motion.div>

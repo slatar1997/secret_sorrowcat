@@ -453,7 +453,7 @@ function FinalScene({ selectedQuizImages, isTortillaCooked, onBackToDesk }: Fina
           {!isKeyUnlocked && (
             <motion.div
               ref={keyRef}
-              className="absolute left-[-220px] sm:left-[-290px] top-[75px] cursor-grab active:cursor-grabbing z-30 pointer-events-auto"
+              className="absolute top-[-260px] sm:top-[-320px] left-1/2 -translate-x-1/2 cursor-grab active:cursor-grabbing z-30 pointer-events-auto"
               initial={{ opacity: 0, scale: 0.5, rotate: -45 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               exit={{ opacity: 0, scale: 0.8, y: -50 }}
