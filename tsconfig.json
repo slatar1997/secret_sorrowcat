@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+
+    /* 🛠️ เติมบรรทัดนี้เพิ่มเข้าไปแล้วครับพี่! บอกมันว่ากูใช้ระบบของ Vite ให้ไปดึงปลั๊กอินเปิดทางให้ CSS ซะ */
+    "types": ["vite/client"]
+  },
+  "include": ["src"]
+}
